@@ -8,11 +8,15 @@ localStorage.setItem("y",m);
 }
 function screen(n){
   var i;
+  var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
   var x=document.getElementsByClassName("navoptions");
   for(i=0; i<x.length; i++)
       x[i].style.backgroundColor="#000";
   
   x[n-1].style.backgroundColor="#5b0504";
+  if (w<=681) {
+    ToggleNav();
+  }
 }
 
 showDivs(slideIndex);
@@ -70,5 +74,22 @@ function ToggleNav() {
         x.className = "topnav";
     }
 }
+function constBackground(){
+
+}
+window.addEventListener('wheel', function(e) {
+  if (e.deltaY < 0) {
+    console.log('scrolling up');
+    var i;
+    var x=document.getElementsByClassName("navoptions");
+    for(i=0; i<x.length; i++)
+      x[i].style.backgroundColor="#000";
+  
+    
+  }
+  if (e.deltaY > 0) {
+    console.log('scrolling down');
+  }
+});
 
 

@@ -2,25 +2,26 @@
 <html lang="en">
 
 <head>
-
+	<title>Namah By Parul</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
     <link href="css/namah.css" rel="stylesheet">
     <script src = "js/namah.js"></script>
-    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 
 </head>
-<body>
+<body >
 	<!-- Navigation -->
     <nav>
     	<ul class="topnav fixed-nav-bar" id="myTopnav">
-  			<li><a href="#top"><img src="img/logo.png" class="alogo" alt="logo"></a></li>
-  			<li><a href="#collection">My Collection</a></li>
-  			 <li><a href="#about">About Me</a></li>
- 			<li><a href="#bottom">Contact Me</a></li>
+  			<li><a href="#top"><img src="img/logo2.png" class="alogo" alt="logo"></a></li>
+  			<li><a href="#collection" class="navoptions" onclick="screen(1)">My Collection</a></li>
+  			 <li><a href="#about" class="navoptions" onclick="screen(2)">About Me</a></li>
+ 			<li><a href="#contact" class="navoptions" onclick="screen(3)">Contact Me</a></li>
+ 			<li><a href="https://www.facebook.com/NAMAH-by-Parul-1445135039044030/"><img src="img/fb.png" class="alogo" alt="Facebook"></a></li>
 
   			<li class="icon">
     			<a href="javascript:void(0);" onclick="ToggleNav()">&#9776;</a>
@@ -40,364 +41,409 @@
     	<script type="text/javascript">
 			var myIndex = 0;
 			carousel();
+			window.addEventListener('wheel', function(e) {
+  			if (e.deltaY < 0) {
+    			console.log('scrolling up');
+    			var i;
+    			var x=document.getElementsByClassName("navoptions");
+    			for(i=0; i<x.length; i++)
+      				x[i].style.backgroundColor="#000";
+  
+    
+  			}
+  			if (e.deltaY > 0) {
+    			console.log('scrolling down');
+  			}
+			});
     	</script>
     </div>
-    <p class="heading" id="collection">
-    My Collection
-    </p>
-    <div class="ImageGallery">
-    	 <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/1.png" alt="">
-	        </a>
-        </div>
-        <div>
-        	<a class="thumbnail" href="#">
-            	<img src="img/collection/2.png" alt="">
-        	</a>
-        </div>
-        <div>
-        	<a class="thumbnail" href="#">
-            	<img src="img/collection/3.png" alt="">
-        	</a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/4.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/5.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/6.png" alt="">
-	         </a>
-	         </div>
-         <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/10.png" alt="">
-	        </a>
-        </div> 
-        <div>
-         	<a class="thumbnail" href="#">
-            	<img src="img/collection/7.png" alt="">
-        	</a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/8.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/9.png" alt="">
-	        </a>
+    <section id="collection">
+    	<h2>My Collection</h2>
+	    <div class="ImageGallery">
+	    	 <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/1.png" alt="Crop Top" onclick="getinfo('1',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+	        	<a class="thumbnail" href="image.html">
+	            	<img src="img/collection/2.png" alt="" onclick="getinfo('2',this)" class="thumb">
+	        	</a>
+	        </div>
+	        <div>
+	        	<a class="thumbnail" href="image.html">
+	            	<img src="img/collection/3.png" alt="" onclick="getinfo('3',this)" class="thumb">
+	        	</a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/4.png" alt="" onclick="getinfo('4',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/5.png" alt="" onclick="getinfo('5',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/6.png" alt="" onclick="getinfo('6',this)" class="thumb">
+		         </a>
+		         </div>
+	         <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/10.png" id="i10" alt="" onclick="getinfo('10',this)" class="thumb">
+		        </a>
+	        </div> 
+	        <div>
+	         	<a class="thumbnail" href="image.html">
+	            	<img src="img/collection/7.png" alt="" onclick="getinfo('7',this)" class="thumb">
+	        	</a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/8.png" alt="" onclick="getinfo('8',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/9.png" alt="" onclick="getinfo('9',this)" class="thumb">
+		        </a>
+		    </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/11.png" alt="" onclick="getinfo('11',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/12.png" alt="" onclick="getinfo('12',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/13_1.png" alt="" onclick="getinfo('13',this)" class="thumb">
+		        </a>
+	        </div>
+	         <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/14.png" alt="" onclick="getinfo('14',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/15.png" id="i15" alt="" onclick="getinfo('15',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/16.png" id="i16" alt="" onclick="getinfo('16',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/17.png" alt="" onclick="getinfo('17',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/18.png" alt="" onclick="getinfo('18',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/19.png" alt="" onclick="getinfo('19',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/20.png" alt="" onclick="getinfo('20',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/21.png" alt="" onclick="getinfo('21',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/22.png" alt="" onclick="getinfo('22',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/23.png" alt="" onclick="getinfo('23',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/24.png" alt="" onclick="getinfo('24',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/25.png" alt="" onclick="getinfo('25',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/26.png" alt="" onclick="getinfo('26',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/27.png" alt="" onclick="getinfo('27',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/28.png" alt="" onclick="getinfo('28',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/29.png" alt="" onclick="getinfo('29',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/30.png" alt="" onclick="getinfo('30',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/31.png" alt="" onclick="getinfo('31',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/32.png" alt="" onclick="getinfo('32',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/33.png" alt="" onclick="getinfo('33',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/34.png" alt="" onclick="getinfo('34',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/35.png" alt="" onclick="getinfo('35',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/36.png" alt="" onclick="getinfo('36',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/37.png" id="i37" alt="" onclick="getinfo('37',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/38.png" id="i38" alt="" onclick="getinfo('38',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/39.png" alt="" id="i39" onclick="getinfo('39',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/40.png" alt="" onclick="getinfo('40',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/41.png" alt="" onclick="getinfo('41',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/42.png" alt="" onclick="getinfo('42',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/43.png" alt="" onclick="getinfo('43',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/44.png" alt="" onclick="getinfo('44',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/45.png" alt="" onclick="getinfo('45',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/46.png" alt="" onclick="getinfo('46',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/47.png" alt="" onclick="getinfo('47',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/48.png" alt="" onclick="getinfo('48',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/49.png" alt="" onclick="getinfo('49',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/50.png" alt="" onclick="getinfo('50',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/51.png" alt="" onclick="getinfo('51',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/52.png" alt="" onclick="getinfo('52',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/53.png" alt="" onclick="getinfo('53',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/54.png" alt="" onclick="getinfo('54',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/55.png" alt="" onclick="getinfo('55',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/56.png" alt="" onclick="getinfo('56',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/57.png" alt="" onclick="getinfo('57',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/58.png" id="i58" alt="" onclick="getinfo('58',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/59.png" alt="" onclick="getinfo('59',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/60.png" alt="" onclick="getinfo('60',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/61.png" alt="" onclick="getinfo('61',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/62.png" alt="" onclick="getinfo('62',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/63.png" alt="" onclick="getinfo('63',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/64.png" alt="" onclick="getinfo('64',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/65.png" alt="" onclick="getinfo('65',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/66.png" alt="" onclick="getinfo('66',this)" class="thumb">
+		        </a>
+	        </div>
+	        <div>
+		        <a class="thumbnail" href="image.html">
+		            <img src="img/collection/67.png" alt="" onclick="getinfo('67',this)" class="thumb">
+		        </a>
+	        </div> 
 	    </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/12.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/13_1.png" alt="">
-	        </a>
-        </div>
-         <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/14.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/15.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/16.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/17.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/18.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/19.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/20.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/21.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/22.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/23.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/24.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/25.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/26.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/27.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/28.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/29.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/30.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/31.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/32.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/33.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/34.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/35.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/36.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/37.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/38.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/39.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/40.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/41.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/42.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/43.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/44.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/45.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/46.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/47.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/48.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/49.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/50.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/51.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/52.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/53.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/54.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/55.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/56.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/57.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/58.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/59.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/60.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/61.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/62.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/63.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/64.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/65.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/66.png" alt="">
-	        </a>
-        </div>
-        <div>
-	        <a class="thumbnail" href="#">
-	            <img src="img/collection/67.png" alt="">
-	        </a>
-        </div> 
-    </div>
-    <div class="heading" id="about">
+    </section>
+    <section  id="about">
+    <h2>
     	About Me
-    </div>
-    	<aside class=left>
-    		<p>Professionally qualified in art and textiles from Apeejay Institute Of Design India, I started as a consultant designer in an export house and designed for brands like JC Penney, Anthropologie, Urban Outfitters etc. However I had an underlying passion for designing high end garments for women be it traditional or western.
+    </h2>
+    	<aside >
+    		<p>Professionally qualified in art and textiles from Apeejay Institute Of Design India, I started as a consultant designer in an export house and designed for brands like JC Penney, Anthropologie, Urban Outfitters etc. However I had an underlying passion for designing high end garments for women be it traditional or western.</p>
     		<p>Intertwining of art, textiles and garments happened quite by chance, it started with designing for close friends and family and the process of learning at each step began there on. 
     		</p>
     		<p>In 2005 with my label NAMAH , I started participating in exhibitions , formed domestic and international clientele, which gave me further encouragement of expansion and I plunged into whole selling as well . There has been no looking back since then. My passion for colors and vibrant nature is clearly visible in my work. It helps me play with my creative side and meet new people each day.</p>
     	</aside>
-    	<aside class="right">
+    	<aside>
     		<figure>
     			<img src="img/about.jpg" class="full">
     			<figcaption>Parul Mongia</figcaption>
     		</figure>
     		
     	</aside> 
-    	<section id="contact">
-    		<p class="heading">Contact Me</p>	
-    	<iframe src='contact/contactform.php' frameborder='0'
-width='100%' height='600' ></iframe>
-</section>
+    </section>
+    <section id="contact">
+    	<h2>Contact Me</h2>
+    <div id="page-wrap">
 
+    	<div id="contact-area">
+			
+			<form method="post" action="contactengine.php">
+				<label for="Name">Name:</label>
+				<input type="text" name="Name" id="Name" />
+				
+				<label for="Phone">Phone:</label>
+				<input type="text" name="Tel" id="Tel" />
+	
+				<label for="Email">Email:</label>
+				<input type="text" name="Email" id="Email" />
+				
+				<label for="Message">Message:</label><br />
+				<textarea name="Message" rows="20" cols="20" id="Message"></textarea>
+
+				<input type="submit" name="submit" value="Submit" class="submit-button" />
+			</form>
+		</div>
+		<div id="map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4168.417956973292!2d77.1975748149307!3d28.533475632886343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce203ce1f3667%3A0x192e9697349047a!2s55%2C+Navjeevan+Vihar%2C+Malviya+Nagar%2C+New+Delhi%2C+Delhi+110017!5e0!3m2!1sen!2sin!4v1475068846914" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
+	</div>
+   </section>
+<footer id="bottom">
+	&copy; <script>new Date().getFullYear()>2010&&document.write(new Date().getFullYear());</script>, Dhruv Mongia
+</footer>
 </body>
 </html>
